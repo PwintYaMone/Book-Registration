@@ -9,64 +9,66 @@
 <section>
   <div class="container">
     <div class="col-sm-6">
-      <form method="post" action="">
-        @csrf
+      
+              <form method="post" action="{{route('book.update',$bo->id)}}">
+
+          @csrf
+          @method('PUT');
         <h2>Book Registration</h2>
          <div class="form-group">
           <div class="form-group">
+
+
+
+
             
-                    <div>
-            <label for="id">Customer_ID</label>
-            <input type="number" class="form-control" name="id" id="id" aria-describedby="idHelp">
-          </div>
+                   
           <div>
             <label for="name">Customer_First_Name</label>
-            <input type="text" class="form-control" name="fname" id="fname" aria-describedby="fnameHelp">
+            <input type="text" class="form-control" name="fname" id="fname" aria-describedby="fnameHelp"  value="{{$bo->fname}}">
           </div>
          <div>
             <label for="name">Customer_Last_Name</label>
-            <input type="text" class="form-control" name="lname" id="lname" aria-describedby="lnameHelp">
+            <input type="text" class="form-control" name="lname" id="lname" aria-describedby="lnameHelp" value="{{$bo->lname}}">
           </div>
           <div>
             <label for="phone">Customer_Phone_Number</label>
-            <input type="text" class="form-control" name="phone" id="phone" aria-describedby=phoneHelp>
+            <input type="text" class="form-control" name="phone" id="phone" aria-describedby="phoneHelp" value="{{$bo->phone}}">
           </div>
             <div>
-            <label for="email">Customer_Email</label>
-            <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+            <label for="exampleInputEmail1">Customer_Email</label>
+            <input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" value="{{$bo->email}}" >
           </div>
            <div>
             <label for="address">Customer_Address</label>
-            <input type="address" class="form-control" name="address" id="address" aria-describedby="addressHelp">
+            <input type="address" class="form-control" name="address" id="address" aria-describedby="addressHelp" value="{{$bo->address}}">
           </div>
           <div>
             <label for="bid">Book_ID</label>
-            <input type="number" class="form-control" name="bid" id="bid" aria-describedby="idHelp">
+            <input type="number" class="form-control" name="bid" id="bid" aria-describedby="idHelp" value="{{$bo->bid}}">
           </div>
           <div>
             <label for="bname">Book_Name</label>
-            <input type="text" class="form-control" name="bname" id="bname" aria-describedby="bnameHelp">
+            <input type="text" class="form-control" name="bname" id="bname" aria-describedby="bnameHelp" value="{{$bo->bname}}">
           </div>
           <div >
             <label for="author">Author</label>
-            <input type="text" class="form-control" name="author" id="author" aria-describedby="authorHelp">
+            <input type="text" class="form-control" name="author" id="author" aria-describedby="authorHelp" value="{{$bo->author}}">
           </div>
           <div >
             <label for="bname">Book_Type</label>
-            <input type="text" class="form-control" name="btype" id="bname" aria-describedby="btypeHelp">
+            <input type="text" class="form-control" name="btype" id="btype" aria-describedby="btypeHelp" value="{{$bo->btype}}">
           </div>
            <div>
             <label for="sdate">Start_Date</label>
-            <input type="date" class="form-control" name="sdate" id="sdate" aria-describedby="sdateHelp">
+            <input type="date" class="form-control" name="sdate" id="sdate" aria-describedby="sdateHelp" value="{{$bo->sdate}}">
           </div>
            <div>
             <label for="ddate">Due_Date</label>
-            <input type="date" class="form-control" name="ddate" id="ddate" aria-describedby="sdateHelp">
+            <input type="date" class="form-control" name="ddate" id="ddate" aria-describedby="sdateHelp" value="{{$bo->ddate}}">
           </div>
           
-          <button type="submit" class="btn btn-primary">ADD</button>
-                    <button type="submit" class="btn btn-primary">Edit</button>
-
+                    <button type="submit" class="btn btn-primary">Update</button>
                     <button type="reset" class="btn btn-primary">Cancel</button>
 
       </form>

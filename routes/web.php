@@ -17,12 +17,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::Resource('/book','BookController');
+Route::get('/book',function(){
+	return view('book');
 
-Route::resource('/book', 'BookController',[
-$names=>['index'=>'book',
+
+});
+
+Route::resource('/books', 'BookController',[
+'names'=>['index'=>'book',
 		'store'=>'book.store',
-		'edit'=>'book.edit'
+		'edit'=>'book.edit',
+		'update'=>'book.update',
 	]
 
 

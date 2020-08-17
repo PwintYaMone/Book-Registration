@@ -42,9 +42,8 @@
   <td>{{$row->author}}</td>
   <td>{{$row->btype}}</td>
   <td>{{$row->sdate}}</td>
-    <td>{{$row->ddate}}</td>
-
-
+  <td>{{$row->ddate}}</td>
+  <td><a href="{{route('book.edit',$row->id)}}">Edit</a></td>
 
   
 </tr>

@@ -31,8 +31,8 @@
             <input type="text" class="form-control" name="phone" id="phone" aria-describedby=phoneHelp>
           </div>
             <div>
-    				<label for="email">Customer_Email</label>
-    				<input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp">
+    				<label for="exampleInputEmail1">Customer_Email</label>
+    				<input type="email" class="form-control" name="email" id="exampleInputEmail1" aria-describedby="emailHelp" >
   				</div>
            <div>
             <label for="address">Customer_Address</label>
@@ -67,7 +67,7 @@
  				 
   				
   				          <button type="submit" class="btn btn-primary">ADD</button>
-                    <button type="submit" class="btn btn-primary">Edit</button>
+                    
 
                     <button type="reset" class="btn btn-primary">Cancel</button>
 

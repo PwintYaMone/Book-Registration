@@ -44,7 +44,7 @@ class BookController extends Controller
         //dd($result);
         BookRegister::create($result);
 
-        return redirect()->route('book.store', compact('result'));
+        return redirect()->route('book');
 
 
          }
@@ -59,7 +59,7 @@ class BookController extends Controller
 
 
     {
-        dd($id);
+
 
 
 
@@ -73,9 +73,16 @@ class BookController extends Controller
      */
     public function edit($id)
 
-    {
 
-    }
+    {
+        //dd($id);
+        $bo=BookRegister::find($id);
+        //dd($bo);
+
+        return view('edit',compact('bo'));
+
+
+            }
 
     /**
      * Update the specified resource in storage.
@@ -86,8 +93,32 @@ class BookController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        //dd($id);
+        $bo=BookRegister::find($id);
+        $bo->fname=request('fname');
+        $bo->lname=request('lname');
+        $bo->phone=request('phone');
+        $bo->email=request('email');
+        $bo->address=request('address');
+        $bo->bid=request('bid');
+        $bo->bname=request('bname');
+        $bo->author=request('author');
+         $bo->btype=request('btype');
+         $bo->sdate=request('sdate');
+         $bo->ddate=request('ddate');
+         $bo->save();
+         //echo "success";
+         return redirect()->route('book');
+
+
+
+
+
     }
+
+
+
+            
 
     /**
      * Remove the specified resource from storage.
